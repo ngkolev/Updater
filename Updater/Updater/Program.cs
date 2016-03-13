@@ -24,11 +24,12 @@ namespace Updater
                 ExecuteInternal(output, scriptName);
             }
 
+            Console.WriteLine();
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey(false);
         }
 
-        private static void ExecuteInternal(ConsoleOutput output, string scriptFileName)
+        private static void ExecuteInternal(IOutput output, string scriptFileName)
         {
             try
             {

@@ -1,14 +1,16 @@
-﻿namespace Updater.Core
+﻿using System.Collections.Generic;
+
+namespace Updater.Core
 {
     class CommandToken
     {
-        public CommandToken(string identifier, string[] arguments)
+        public CommandToken(string identifier, ICollection<string> arguments)
         {
             Identifier = identifier;
             Arguments = arguments;
         }
 
         public string Identifier { get; }
-        public string[] Arguments { get; }
+        public ICollection<string> Arguments { get; }
     }
 }

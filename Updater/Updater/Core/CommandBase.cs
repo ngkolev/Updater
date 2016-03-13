@@ -1,4 +1,5 @@
-﻿using Updater.Common;
+﻿using System.Collections.Generic;
+using Updater.Common;
 
 namespace Updater.Core
 {
@@ -12,7 +13,8 @@ namespace Updater.Core
         private IOutput Output { get; }
 
         public abstract string Name { get; }
+        public abstract int ExpectedArguments { get; }
 
-        public abstract void Execute(string[] arguments);
+        public abstract void Execute(ICollection<string> arguments);
     }
 }

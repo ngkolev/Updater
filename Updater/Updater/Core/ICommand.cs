@@ -1,8 +1,11 @@
-﻿namespace Updater.Core
+﻿using System.Collections.Generic;
+
+namespace Updater.Core
 {
     interface ICommand
     {
         string Name { get; }
-        void Execute(string[] arguments);
+        int ExpectedArguments { get; }
+        void Execute(ICollection<string> arguments);
     }
 }

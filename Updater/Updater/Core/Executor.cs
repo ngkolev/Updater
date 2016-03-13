@@ -1,18 +1,17 @@
 ﻿using System.Diagnostics;
 using Updater.Common;
-using Updater.Core;
 
-namespace Updater
+namespace Updater.Core
 {
     class Executor
     {
-        public Executor(ConsoleOutput consoleOutput, string scriptFileName)
+        public Executor(IOutput consoleOutput, string scriptFileName)
         {
             Output = consoleOutput;
             ScriptFileName = scriptFileName;
         }
 
-        private ConsoleOutput Output { get; }
+        private IOutput Output { get; }
         private string ScriptFileName { get; }
 
         public void Run()
@@ -21,7 +20,7 @@ namespace Updater
 
             // Load available commands
             Output.WriteLine("Loading available commands.");
-            var executor = new CommandExecutor();
+            var executor = new CommandExecutor(Output);
             executor.LoadCommands();
             Output.WriteLine($"{executor.NumberOfCommands} commands loaded.");
 

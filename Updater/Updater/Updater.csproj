@@ -54,7 +54,7 @@
     <Compile Include="Exceptions\IncorrectNumberOfArgumentsException.cs" />
     <Compile Include="Exceptions\ScriptNotFoundException.cs" />
     <Compile Include="Exceptions\UpdaterException.cs" />
-    <Compile Include="Executor.cs" />
+    <Compile Include="Core\Executor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
