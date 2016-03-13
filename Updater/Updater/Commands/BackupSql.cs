@@ -18,8 +18,7 @@ namespace Updater.Commands
 
         public override void Execute(string[] arguments)
         {
-            var backupFile = PhraseUtil.ReplacePhrases(arguments[2]);
-            var sqlScript =$"BACKUP DATABASE {arguments[1]} TO DISK = '{backupFile}'";
+            var sqlScript =$"BACKUP DATABASE {arguments[1]} TO DISK = '{arguments[2]}'";
 
             using (var conn = new SqlConnection(arguments[0]))
             {

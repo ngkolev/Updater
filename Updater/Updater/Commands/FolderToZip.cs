@@ -17,9 +17,7 @@ namespace Updater.Commands
 
         public override void Execute(string[] arguments)
         {
-            var backupFile = PhraseUtil.ReplacePhrases(arguments[1]);
-
-            ZipFile.CreateFromDirectory(arguments[0], backupFile);
+            ZipFile.CreateFromDirectory(arguments[0], arguments[1]);
         }
     }
 }

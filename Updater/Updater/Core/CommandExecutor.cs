@@ -42,8 +42,14 @@ namespace Updater.Core
                 throw new IncorrectNumberOfArgumentsException(identifier, command.ExpectedArguments, arguments.Count);
             }
 
+            var args = arguments.ToArray();
+            for (var i = 0; i < args.Length; i++)
+            {
+                args[i] = PhraseUtil.ReplacePhrases(args[i]);
+            }
+
             Output.WriteLine($"Executing command {identifier}");
-            command.Execute(arguments.ToArray());
+            command.Execute(args);
         }
     }
 }
