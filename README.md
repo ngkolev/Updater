@@ -12,7 +12,7 @@ Supported commands are:
 * BackupSql connectionString backupDatabase backupFileFullName
 * DeleteFolder folderPath
 
-**REMARK 1** You can use $dateIdentifier$ in the filename. It will be replaced with yyyyMMdd string corresponding with the current date.
+**REMARK 1** You can use $dateIdentifier$ in any of the arguments. It will be replaced with yyyyMMdd string corresponding with the current date.
 
 **REMARK 2** The command and arguments are separated not by spaces but by tabs. This way it is easier when the arguments contain spaces, e.g., folder names.
 
