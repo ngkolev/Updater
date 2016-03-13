@@ -6,7 +6,7 @@ Let's say you have named the application _updater.exe_ and have it in your PATH 
 
 Supported commands are:
 * ZipToFolder zipFileName folderPath
-* CleanFolder folderPath [list of file extensions to clear]
+* CleanFolder folderPath fileExtensionToBeRemoved
 * FolderToZip folderPath zipFileName
 * FolderToFolder sourceFolderPath destinationFolderPath
 * BackupSql connectionString backupDatabase backupFolder 
