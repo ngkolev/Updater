@@ -12,6 +12,10 @@ Supported commands are:
 * BackupSql connectionString backupDatabase backupFolder 
 * DeleteFolder folderPath
 
+**REMARK 1** You can use $dateIdentifier$ in the filename. It will be replaced with yyyyMMdd string corresponding with the current date.
+
+**REMARK 2** The command and arguments are separated not by spaces but by tabs. This way it is easier when the arguments contain spaces, e.g., folder names.
+
 One example scenario that we automate is:
 * Backup the database
 * Unzip the installation package in a temp folder
