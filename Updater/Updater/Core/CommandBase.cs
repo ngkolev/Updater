@@ -15,6 +15,6 @@ namespace Updater.Core
         public abstract string Name { get; }
         public abstract int ExpectedArguments { get; }
 
-        public abstract void Execute(ICollection<string> arguments);
+        public abstract void Execute(string[] arguments);
     }
 }

@@ -6,6 +6,6 @@ namespace Updater.Core
     {
         string Name { get; }
         int ExpectedArguments { get; }
-        void Execute(ICollection<string> arguments);
+        void Execute(string[] arguments);
     }
 }

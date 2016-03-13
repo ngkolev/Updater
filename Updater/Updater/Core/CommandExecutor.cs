@@ -42,7 +42,7 @@ namespace Updater.Core
             }
 
             Output.WriteLine($"Executing command {identifier}");
-            command.Execute(arguments);
+            command.Execute(arguments.ToArray());
         }
     }
 }

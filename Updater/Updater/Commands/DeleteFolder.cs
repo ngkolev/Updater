@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using Updater.Common;
 using Updater.Core;
 
@@ -14,9 +15,9 @@ namespace Updater.Commands
         public override string Name => "DeleteFolder";
         public override int ExpectedArguments => 1;
 
-        public override void Execute(ICollection<string> arguments)
+        public override void Execute(string[] arguments)
         {
-            throw new NotImplementedException();
+            Directory.Delete(arguments[0]);
         }
     }
 }

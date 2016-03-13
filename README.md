@@ -9,7 +9,7 @@ Supported commands are:
 * CleanFolder folderPath fileExtensionToBeRemoved
 * FolderToZip folderPath zipFileName
 * FolderToFolder sourceFolderPath destinationFolderPath
-* BackupSql connectionString backupDatabase backupFolder 
+* BackupSql connectionString backupDatabase backupFileFullName
 * DeleteFolder folderPath
 
 **REMARK 1** You can use $dateIdentifier$ in the filename. It will be replaced with yyyyMMdd string corresponding with the current date.

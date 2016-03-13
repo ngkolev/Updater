@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Compression;
 using Updater.Common;
 using Updater.Core;
 
@@ -14,9 +15,9 @@ namespace Updater.Commands
         public override string Name => "ZipToFolder";
         public override int ExpectedArguments => 2;
 
-        public override void Execute(ICollection<string> arguments)
+        public override void Execute(string[] arguments)
         {
-            throw new NotImplementedException();
+            ZipFile.ExtractToDirectory(arguments[0], arguments[1]);
         }
     }
 }
