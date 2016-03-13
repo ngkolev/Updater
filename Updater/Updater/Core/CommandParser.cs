@@ -5,12 +5,15 @@ namespace Updater.Core
 {
     class CommandParser
     {
-        public CommandParser(string scriptName)
+        private readonly string _scriptFileName;
+
+        public CommandParser(string scriptFileName)
         {
-            ScriptName = scriptName;
+            _scriptFileName = scriptFileName;
+            ScriptFileName = scriptFileName;
         }
 
-        private string ScriptName { get; }
+        private string ScriptFileName { get; }
 
         public ICollection<CommandToken> Parse()
         {

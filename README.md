@@ -22,3 +22,4 @@ One example scenario that we automate is:
 * Remove all *.config and *.sitemap files
 * Copy temp folder content into the application installation directory
 * Remove temp folder
+* Manually make web.config changes and execute SQL migration scripts

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\CommandNotFoundException.cs" />
     <Compile Include="Core\CommandToken.cs" />
     <Compile Include="Core\CommandBase.cs" />
     <Compile Include="Core\CommandExecutor.cs" />
@@ -50,6 +51,9 @@
     <Compile Include="Core\ICommand.cs" />
     <Compile Include="Common\ConsoleOutput.cs" />
     <Compile Include="Common\IOutput.cs" />
+    <Compile Include="Exceptions\IncorrectNumberOfArgumentsException.cs" />
+    <Compile Include="Exceptions\ScriptNotFoundException.cs" />
+    <Compile Include="Exceptions\UpdaterException.cs" />
     <Compile Include="Executor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

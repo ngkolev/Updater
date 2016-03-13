@@ -1,21 +1,24 @@
-﻿using Updater.Common;
+﻿using System.Diagnostics;
+using Updater.Common;
 using Updater.Core;
 
 namespace Updater
 {
     class Executor
     {
-        public Executor(ConsoleOutput consoleOutput, string scriptName)
+        public Executor(ConsoleOutput consoleOutput, string scriptFileName)
         {
             Output = consoleOutput;
-            ScriptName = scriptName;
+            ScriptFileName = scriptFileName;
         }
 
         private ConsoleOutput Output { get; }
-        private string ScriptName { get; }
+        private string ScriptFileName { get; }
 
         public void Run()
         {
+            var watch = Stopwatch.StartNew();
+
             // Load available commands
             Output.WriteLine("Loading available commands.");
             var executor = new CommandExecutor();
@@ -24,7 +27,7 @@ namespace Updater
 
             // Parse
             Output.WriteLine("Reading script file.");
-            var parser = new CommandParser(ScriptName);
+            var parser = new CommandParser(ScriptFileName);
             var commands = parser.Parse();
 
             // For each parsed command invoke the executor
@@ -33,7 +36,8 @@ namespace Updater
             {
                 executor.ExecuteCommand(command.Identifier, command.Arguments);
             }
-            Output.WriteLine("Done.");
+
+            Output.WriteLine($"Done for {watch.ElapsedMilliseconds} ms.");
         }
     }
 }
