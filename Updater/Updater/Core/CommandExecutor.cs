@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Updater.Common;
 using Updater.Exceptions;
 
@@ -21,11 +22,11 @@ namespace Updater.Core
         public void LoadCommands()
         {
             var type = typeof(ICommand);
-            var types = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(s => s.GetTypes())
-                .Where(p => type.IsAssignableFrom(p) && !type.IsAbstract);
+            var types = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(p => type.IsAssignableFrom(p) && p.Name != nameof(CommandBase) && p.Name != nameof(ICommand));
 
-            Commands = types.Select(t => Activator.CreateInstance(t, Output)).OfType<ICommand>().ToList();
+            Commands = types.Select(t => Activator.CreateInstance(t, Output)).Cast<ICommand>().ToList();
         }
 
         public void ExecuteCommand(string identifier, ICollection<string> arguments)
