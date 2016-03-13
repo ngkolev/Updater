@@ -17,7 +17,7 @@ namespace Updater.Commands
 
         public override void Execute(string[] arguments)
         {
-            Directory.Delete(arguments[0]);
+            Directory.Delete(arguments[0], true);
         }
     }
 }
