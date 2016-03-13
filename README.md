@@ -16,8 +16,9 @@ Supported commands are:
 
 **REMARK 2** The command and arguments are separated not by spaces but by tabs. This way it is easier when the arguments contain spaces, e.g., folder names.
 
-One example scenario that we automate is:
+One example scenario that we automate is (see example.upd file):
 * Backup the database
+* Backup application's folder
 * Unzip the installation package in a temp folder
 * Remove all *.config and *.sitemap files
 * Copy temp folder content into the application installation directory

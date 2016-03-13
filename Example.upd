@@ -1,0 +1,14 @@
+# Backup database
+BackupSql	Data Source=SERVER;Initial Catalog=master;Persist Security Info=True;User ID=USER;Password=PASSWORD;MultipleActiveResultSets=True	DATABASENAME	c:\backup\DATABASE_$dateIdentifier$.bak
+
+# Unzip archive
+DeleteFolder	C:\Users\USER\Desktop\APPLICATION
+ZipToFolder	C:\Users\USER\Desktop\APPLICATION.zip	C:\Users\USER\Desktop\APPLICATION
+
+# Remove configuration files
+CleanFolder	C:\Users\USER\Desktop\APPLICATION	config
+CleanFolder	C:\Users\USER\Desktop\APPLICATION	sitemap
+
+# Copy to web application's folder and remove temp
+FolderToFolder	C:\Users\USER\Desktop\APPLICATION	C:\www\APPLICATION\
+DeleteFolder	C:\Users\USER\Desktop\APPLICATION
