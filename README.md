@@ -2,7 +2,7 @@
 A tool used to execute commands intended to update legacy sites "the old way". However, it can be used as a simple task runner. It is designed to be easily extendable.
 
 # How to use:
-Let's say you have named the application _updater.exe_ and have it in your PATH variable. In command prompt, execute the following command - _updater prod_. Note that there is a prod.upd file that contains the script. This files consists of commands - one command per line. If a line starts with '#', then the whole line is ignored. This is used for to have comments in the scripts.
+Let's say you have named the application _updater.exe_ and have it in your PATH variable. In command prompt, execute the following command - _updater prod_. Note that there is a prod.upd file that contains the script. This file consists of commands - one command per line. If a line starts with '#', then the whole line is ignored. This is used for to have comments in the scripts.
 
 Supported commands are:
 * ZipToFolder zipFileName folderPath
