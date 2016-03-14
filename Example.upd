@@ -12,3 +12,4 @@ CleanFolder	C:\Users\USER\Desktop\APPLICATION	sitemap
 # Copy to web application's folder and remove temp
 FolderToFolder	C:\Users\USER\Desktop\APPLICATION	C:\www\APPLICATION\
 DeleteFolder	C:\Users\USER\Desktop\APPLICATION
+DeleteFile	C:\Users\USER\Desktop\APPLICATION.zip

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Commands\BackupSql.cs" />
     <Compile Include="Commands\CleanFolder.cs" />
+    <Compile Include="Commands\DeleteFile.cs" />
     <Compile Include="Commands\DeleteFolder.cs" />
     <Compile Include="Commands\FolderToFolder.cs" />
     <Compile Include="Commands\FolderToZip.cs" />

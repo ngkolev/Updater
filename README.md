@@ -22,5 +22,5 @@ One example scenario that we automate is (see example.upd file):
 * Unzip the installation package in a temp folder
 * Remove all *.config and *.sitemap files
 * Copy temp folder content into the application installation directory
-* Remove temp folder
+* Remove temp folder and installation package zip file
 * Manually make web.config changes and execute SQL migration scripts
