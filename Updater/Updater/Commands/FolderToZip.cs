@@ -24,6 +24,11 @@ namespace Updater.Commands
                 Directory.CreateDirectory(directory);
             }
 
+            if (File.Exists(arguments[1]))
+            {
+                File.Delete(arguments[1]);
+            }
+
             ZipFile.CreateFromDirectory(arguments[0], arguments[1]);
         }
     }
