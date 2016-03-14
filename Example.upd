@@ -1,8 +1,8 @@
-# Backup database
+# Backup 
 BackupSql	Data Source=SERVER;Initial Catalog=master;Persist Security Info=True;User ID=USER;Password=PASSWORD;MultipleActiveResultSets=True	DATABASENAME	c:\backup\DATABASE_$dateIdentifier$.bak
+FolderToZip	C:\www\APPLICATION\	C:\Backup\APPLICATION\Application_$dateIdentifier$.zip
 
 # Unzip archive
-DeleteFolder	C:\Users\USER\Desktop\APPLICATION
 ZipToFolder	C:\Users\USER\Desktop\APPLICATION.zip	C:\Users\USER\Desktop\APPLICATION
 
 # Remove configuration files

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.IO.Compression;
 using Updater.Common;
 using Updater.Core;
@@ -17,6 +18,12 @@ namespace Updater.Commands
 
         public override void Execute(string[] arguments)
         {
+            var directory = Path.GetDirectoryName(arguments[1]);
+            if (directory != null && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             ZipFile.CreateFromDirectory(arguments[0], arguments[1]);
         }
     }
