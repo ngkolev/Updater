@@ -1,5 +1,5 @@
 # Backup 
-BackupSql	Data Source=SERVER;Initial Catalog=master;Persist Security Info=True;User ID=USER;Password=PASSWORD;MultipleActiveResultSets=True	DATABASENAME	c:\backup\DATABASE_$dateIdentifier$.bak
+BackupSql	Data Source=SERVER;Initial Catalog=master;Persist Security Info=True;User ID=USER;Password=PASSWORD;MultipleActiveResultSets=True;Connection Timeout=999	DATABASENAME	c:\backup\DATABASE_$dateIdentifier$.bak
 FolderToZip	C:\www\APPLICATION\	C:\Backup\APPLICATION\Application_$dateIdentifier$.zip
 
 # Unzip archive
