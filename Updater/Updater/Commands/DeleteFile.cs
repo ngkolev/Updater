@@ -20,7 +20,7 @@ namespace Updater.Commands
 
         public override void Execute(string[] arguments)
         {
-            File.Delete(arguments[1]);
+            File.Delete(arguments[0]);
         }
     }
 }
