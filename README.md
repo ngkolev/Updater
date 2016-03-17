@@ -11,6 +11,7 @@ Supported commands are:
 * FolderToFolder sourceFolderPath destinationFolderPath
 * BackupSql connectionString backupDatabase backupFileFullName
 * DeleteFolder folderPath
+* DeleteFile fileName
 
 **REMARK 1** You can use $dateIdentifier$ in any of the arguments. It will be replaced with yyyyMMdd string corresponding with the current date.
 
